@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Por Cierto — Frase del Día · a living Spanish phrase every day</title>
+<meta name="description" content="One living Spanish expression a day. Say it 10 times, check off each use, keep your streak. An iPhone app with a Home Screen widget. Works offline, no account, no data collection.">
+<meta property="og:title" content="Por Cierto — a living Spanish phrase every day">
+<meta property="og:description" content="One phrase a day. Ten real uses. That's how it sticks forever. iPhone app with a widget — offline, no ads, no data collection.">
+<meta property="og:url" content="https://por-cierto.elen.red/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%234A1A4F'/><stop offset='0.55' stop-color='%23A62B4A'/><stop offset='1' stop-color='%23ED7838'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><circle cx='50' cy='58' r='20' fill='%23FFC65A'/></svg>">
+</head>
+<body>
+<style>
+  :root {
+    --indigo:#29174D; --plum:#4A1A4F; --wine:#A62B4A; --coral:#D9593B; --sunset:#ED7838; --gold:#FFC15A;
+    /* sunset (dark) is the committed brand look */
+    --bg:#1B1030; --bg-2:#2A1440; --card:rgba(255,255,255,0.06); --card-solid:#2C1741;
+    --ink:#FFF7ED; --ink-soft:#D6BBC9; --line:rgba(255,255,255,0.12);
+    --accent:var(--gold); --flame:var(--sunset);
+    --chip:rgba(255,255,255,0.09);
+    --hero-grad:radial-gradient(120% 120% at 15% 0%, #3A1A54 0%, #1B1030 55%),
+                radial-gradient(120% 120% at 100% 100%, #ED7838 0%, rgba(237,120,56,0) 45%),
+                radial-gradient(110% 110% at 85% 15%, #A62B4A 0%, rgba(166,43,74,0) 50%);
+    --shadow:0 30px 70px -30px rgba(0,0,0,0.7);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg:#FFF6E9; --bg-2:#FFEFD6; --card:#FFFFFF; --card-solid:#FFFFFF;
+      --ink:#3D2140; --ink-soft:#8A6A72; --line:#F0D9BE;
+      --accent:#B56919; --flame:#CF4F29; --chip:#FBE7CC;
+      --hero-grad:radial-gradient(120% 120% at 12% 0%, #FFF0D6 0%, #FFF6E9 55%),
+                  radial-gradient(120% 120% at 100% 100%, #F5C99C 0%, rgba(245,201,156,0) 48%);
+      --shadow:0 26px 60px -28px rgba(120,60,20,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1030; --bg-2:#2A1440; --card:rgba(255,255,255,0.06); --card-solid:#2C1741;
+    --ink:#FFF7ED; --ink-soft:#D6BBC9; --line:rgba(255,255,255,0.12); --accent:var(--gold); --flame:var(--sunset); --chip:rgba(255,255,255,0.09);
+    --hero-grad:radial-gradient(120% 120% at 15% 0%, #3A1A54 0%, #1B1030 55%),radial-gradient(120% 120% at 100% 100%, #ED7838 0%, rgba(237,120,56,0) 45%),radial-gradient(110% 110% at 85% 15%, #A62B4A 0%, rgba(166,43,74,0) 50%);
+    --shadow:0 30px 70px -30px rgba(0,0,0,0.7);
+  }
+  :root[data-theme="light"]{
+    --bg:#FFF6E9; --bg-2:#FFEFD6; --card:#FFFFFF; --card-solid:#FFFFFF; --ink:#3D2140; --ink-soft:#8A6A72; --line:#F0D9BE; --accent:#B56919; --flame:#CF4F29; --chip:#FBE7CC;
+    --hero-grad:radial-gradient(120% 120% at 12% 0%, #FFF0D6 0%, #FFF6E9 55%),radial-gradient(120% 120% at 100% 100%, #F5C99C 0%, rgba(245,201,156,0) 48%);
+    --shadow:0 26px 60px -28px rgba(120,60,20,0.35);
+  }
+
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 24px; }
+  a { color:inherit; }
+  [data-ru]{ display:none; }
+  html[lang="ru"] [data-en]{ display:none; }
+  html[lang="ru"] [data-ru]{ display:revert; }
+
+  /* nav */
+  nav { display:flex; align-items:center; justify-content:space-between; padding:22px 0; gap:16px; }
+  .logo { display:flex; align-items:center; gap:12px; font-weight:800; font-size:19px; letter-spacing:-0.2px; }
+  .logo-mark { width:40px; height:40px; border-radius:11px; background:linear-gradient(150deg,#4A1A4F,#A62B4A 55%,#ED7838); display:grid; place-items:center; position:relative; box-shadow:0 6px 16px -6px rgba(0,0,0,0.5); }
+  .logo-mark::after { content:""; width:17px; height:17px; border-radius:50%; background:var(--gold); box-shadow:0 0 14px 2px rgba(255,193,90,0.6); }
+  .nav-right { display:flex; align-items:center; gap:12px; }
+  .seg { display:flex; background:var(--chip); border-radius:999px; padding:3px; }
+  .seg button { border:0; background:none; font-family:inherit; cursor:pointer; font-size:13px; font-weight:700; color:var(--ink-soft); padding:7px 13px; border-radius:999px; transition:.15s; }
+  .seg button.on { background:var(--card-solid); color:var(--flame); box-shadow:0 2px 8px rgba(0,0,0,0.25); }
+  html[lang="ru"] .seg button.on { box-shadow:0 2px 8px rgba(0,0,0,0.15); }
+  .nav-cta { background:var(--ink); color:var(--bg); text-decoration:none; padding:10px 20px; border-radius:999px; font-size:15px; font-weight:700; white-space:nowrap; transition:transform .15s; }
+  .nav-cta:hover { transform:scale(1.04); }
+
+  /* hero */
+  .hero-bg { background:var(--hero-grad); }
+  .hero { display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center; padding:52px 0 72px; }
+  .eyebrow { display:inline-flex; align-items:center; gap:9px; font-size:12.5px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; color:var(--accent); margin-bottom:20px; }
+  .eyebrow::before { content:""; width:26px; height:2px; background:var(--accent); }
+  h1 { font-family:Georgia,"Times New Roman",serif; font-size:clamp(42px,6vw,72px); line-height:1.03; letter-spacing:-1.4px; font-weight:700; margin:0 0 22px; text-wrap:balance; }
+  h1 .accent { color:var(--flame); font-style:italic; }
+  .hero-sub { font-size:19px; color:var(--ink-soft); max-width:44ch; margin:0 0 30px; }
+  .hero-sub strong { color:var(--ink); font-weight:700; }
+  .cta-row { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .store-badge { display:inline-flex; align-items:center; gap:12px; background:var(--ink); color:var(--bg); text-decoration:none; padding:13px 24px; border-radius:14px; transition:transform .15s; box-shadow:0 14px 30px -14px rgba(0,0,0,0.6); }
+  .store-badge:hover { transform:translateY(-2px); }
+  .store-badge svg { width:26px; height:26px; flex:none; }
+  .store-badge .lines { display:flex; flex-direction:column; line-height:1.15; text-align:left; }
+  .store-badge .small { font-size:11px; opacity:.75; }
+  .store-badge .big { font-size:18px; font-weight:700; letter-spacing:-0.2px; }
+  .price-note { font-size:15px; color:var(--ink-soft); }
+
+  /* phone / phrase card */
+  .phone { justify-self:center; width:300px; max-width:100%; border-radius:40px; padding:14px; background:linear-gradient(160deg,#241238,#160C29); box-shadow:var(--shadow); border:1px solid rgba(255,255,255,0.08); }
+  .screen { border-radius:28px; padding:26px 22px 30px; background:linear-gradient(165deg,#4A1A4F 0%,#A62B4A 52%,#ED7838 100%); color:#FFF7ED; position:relative; overflow:hidden; min-height:520px; display:flex; flex-direction:column; }
+  .screen .kicker { font-size:12px; letter-spacing:1.4px; text-transform:uppercase; opacity:.8; font-weight:700; }
+  .screen .phrase { font-family:Georgia,serif; font-size:33px; line-height:1.1; font-weight:700; margin:10px 0 6px; }
+  .screen .gloss { color:#FFD79A; font-size:16px; font-weight:600; }
+  .screen .note { font-size:14px; opacity:.9; margin-top:14px; line-height:1.5; }
+  .screen .ex { margin-top:16px; font-size:14px; background:rgba(0,0,0,0.16); border-radius:12px; padding:11px 13px; }
+  .screen .ex b { color:#FFE0AE; font-weight:700; }
+  .suns { margin-top:auto; padding-top:22px; }
+  .suns .label { font-size:12px; letter-spacing:1px; text-transform:uppercase; opacity:.8; font-weight:700; margin-bottom:9px; }
+  .sun-row { display:flex; gap:7px; flex-wrap:wrap; }
+  .sun { width:26px; height:26px; border-radius:50%; display:grid; place-items:center; font-size:14px; background:rgba(255,255,255,0.14); }
+  .sun.on { background:var(--gold); color:#7A3410; box-shadow:0 0 12px rgba(255,193,90,0.55); }
+  .streak { margin-top:14px; font-size:14px; font-weight:700; display:inline-flex; align-items:center; gap:7px; }
+
+  /* sections */
+  section { padding:76px 0; border-top:1px solid var(--line); }
+  .sec-eyebrow { font-size:12.5px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; color:var(--accent); }
+  h2 { font-family:Georgia,serif; font-size:clamp(30px,4vw,44px); line-height:1.1; letter-spacing:-0.8px; margin:14px 0 0; font-weight:700; text-wrap:balance; }
+  .sec-sub { color:var(--ink-soft); max-width:56ch; margin:16px 0 0; font-size:18px; }
+
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:44px; }
+  .step { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px; }
+  .step .n { width:38px; height:38px; border-radius:11px; background:var(--chip); color:var(--flame); display:grid; place-items:center; font-weight:800; font-size:18px; margin-bottom:16px; }
+  .step h3 { margin:0 0 8px; font-size:20px; letter-spacing:-0.3px; }
+  .step p { margin:0; color:var(--ink-soft); font-size:15.5px; }
+
+  .features { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:44px; }
+  .feat { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; }
+  .feat .ic { font-size:24px; margin-bottom:12px; }
+  .feat h3 { margin:0 0 6px; font-size:17.5px; letter-spacing:-0.2px; }
+  .feat p { margin:0; color:var(--ink-soft); font-size:14.5px; }
+
+  .phrases { display:flex; flex-wrap:wrap; gap:12px; margin-top:40px; }
+  .pchip { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 16px; }
+  .pchip b { font-family:Georgia,serif; font-size:18px; font-weight:700; }
+  .pchip span { display:block; color:var(--ink-soft); font-size:13.5px; margin-top:2px; }
+
+  /* legal */
+  .legal { max-width:760px; }
+  .legal h3 { font-size:19px; margin:30px 0 8px; letter-spacing:-0.3px; }
+  .legal p { color:var(--ink-soft); margin:0 0 12px; }
+  .legal .lead { color:var(--ink); font-size:19px; }
+  .updated { font-size:14px; color:var(--ink-soft); margin-top:6px; }
+  .mail { color:var(--flame); font-weight:700; text-decoration:none; }
+  .mail:hover { text-decoration:underline; }
+
+  footer { padding:40px 0 56px; border-top:1px solid var(--line); color:var(--ink-soft); font-size:14.5px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  footer a { text-decoration:none; }
+  footer a:hover { color:var(--flame); }
+
+  @media (max-width:860px){
+    .hero { grid-template-columns:1fr; gap:36px; padding:36px 0 56px; text-align:center; }
+    .eyebrow { justify-content:center; }
+    .hero-sub { margin-left:auto; margin-right:auto; }
+    .cta-row { justify-content:center; }
+    .steps,.features { grid-template-columns:1fr; }
+    .phone { order:-1; }
+  }
+</style>
+
+<div class="hero-bg">
+<div class="wrap">
+  <nav>
+    <div class="logo"><span class="logo-mark"></span> Por Cierto</div>
+    <div class="nav-right">
+      <div class="seg" role="group" aria-label="Language">
+        <button id="en" class="on" onclick="setLang('en')">EN</button>
+        <button id="ru" onclick="setLang('ru')">RU</button>
+      </div>
+      <div class="seg" aria-label="Theme">
+        <button onclick="setTheme('dark')" title="Sunset">🌙</button>
+        <button onclick="setTheme('light')" title="Day">☀️</button>
+      </div>
+      <a class="nav-cta" href="https://apps.apple.com/app/id6792096525"><span data-en>App Store</span><span data-ru>В App Store</span></a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <span class="eyebrow"><span data-en>Living Spanish · one a day</span><span data-ru>Живой испанский · одна в день</span></span>
+      <h1><span data-en>One phrase a day.<br>Used <span class="accent">ten times.</span></span><span data-ru>Одна фраза в день.<br>Сказана <span class="accent">десять раз.</span></span></h1>
+      <p class="hero-sub"><span data-en>The kind of expression Spaniards actually say — <strong>por si acaso, menos mal, a lo mejor</strong>. Say it 10 times today, check off each use, keep your streak.</span><span data-ru>Выражения, которые испанцы говорят на самом деле — <strong>por si acaso, menos mal, a lo mejor</strong>. Скажи фразу 10 раз за день, отмечай каждое использование, держи серию.</span></p>
+      <div class="cta-row">
+        <a class="store-badge" href="https://apps.apple.com/app/id6792096525">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.417 2.2-1.113 2.99-.735.83-1.94 1.47-3.11 1.38-.14-1.11.43-2.28 1.09-3.02.74-.83 2.02-1.44 3.13-1.35zM20.5 17.02c-.57 1.31-.84 1.9-1.57 3.06-1.02 1.62-2.46 3.64-4.25 3.65-1.59.02-2-1.03-4.15-1.02-2.15.01-2.6 1.04-4.19 1.03-1.79-.02-3.15-1.84-4.17-3.46C-.9 16.2-1.26 10.34 1.5 7.24 2.7 5.87 4.4 5 6.02 5c1.66 0 2.7 1.03 4.07 1.03 1.33 0 2.14-1.03 4.06-1.03 1.44 0 2.96.78 4.05 2.13-3.56 1.95-2.98 7.03.3 8.89z"/></svg>
+          <span class="lines"><span class="small"><span data-en>Download on the</span><span data-ru>Загрузить в</span></span><span class="big">App Store</span></span>
+        </a>
+        <span class="price-note"><span data-en>iPhone · widget · offline</span><span data-ru>iPhone · виджет · офлайн</span></span>
+      </div>
+    </div>
+
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="kicker"><span data-en>Phrase of the day</span><span data-ru>Фраза дня</span></div>
+        <div class="phrase">por si acaso</div>
+        <div class="gloss"><span data-en>just in case</span><span data-ru>на всякий случай</span></div>
+        <div class="note"><span data-en>Drop it before anything you do as a precaution — take an umbrella, save a copy, ask twice.</span><span data-ru>Ставится перед тем, что делаешь на всякий случай — взять зонт, сохранить копию, переспросить.</span></div>
+        <div class="ex"><b>Llévate una chaqueta, por si acaso.</b><br><span data-en>Take a jacket, just in case.</span><span data-ru>Возьми куртку, на всякий случай.</span></div>
+        <div class="suns">
+          <div class="label"><span data-en>Used today</span><span data-ru>Сегодня сказано</span></div>
+          <div class="sun-row">
+            <span class="sun on">☀</span><span class="sun on">☀</span><span class="sun on">☀</span><span class="sun on">☀</span><span class="sun on">☀</span><span class="sun on">☀</span><span class="sun">☀</span><span class="sun">☀</span><span class="sun">☀</span><span class="sun">☀</span>
+          </div>
+          <div class="streak">🔥 <span data-en>12-day streak</span><span data-ru>серия 12 дней</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+</div>
+
+<div class="wrap">
+
+  <section id="how">
+    <span class="sec-eyebrow"><span data-en>How it works</span><span data-ru>Как это работает</span></span>
+    <h2><span data-en>Not flashcards. Reps in real life.</span><span data-ru>Не карточки. Повторы в реальной жизни.</span></h2>
+    <p class="sec-sub"><span data-en>Recognising a phrase isn't knowing it. You own a phrase once it falls out of your mouth without thinking — so the whole app is built around one daily mission.</span><span data-ru>Узнавать фразу — не значит знать её. Фраза становится твоей, когда слетает с языка сама. Поэтому всё приложение построено вокруг одной ежедневной цели.</span></p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3><span data-en>Get one phrase</span><span data-ru>Получи фразу</span></h3><p><span data-en>Every morning: one living expression with a translation, when to use it, and three ready-made examples.</span><span data-ru>Каждое утро — одно живое выражение с переводом, объяснением, когда так говорят, и тремя примерами.</span></p></div>
+      <div class="step"><div class="n">2</div><h3><span data-en>Use it 10×</span><span data-ru>Скажи 10 раз</span></h3><p><span data-en>With anyone, anywhere, out loud or in chat. Tap a sun for each real use — from the app or the widget.</span><span data-ru>С кем угодно, где угодно, вслух или в переписке. Отмечай солнышком каждое использование — из приложения или виджета.</span></p></div>
+      <div class="step"><div class="n">3</div><h3><span data-en>Keep the streak</span><span data-ru>Держи серию</span></h3><p><span data-en>Ten suns finish the day. Consecutive completed days build a streak you won't want to break.</span><span data-ru>Десять солнц закрывают день. Идущие подряд дни собираются в серию, которую не захочется прерывать.</span></p></div>
+    </div>
+  </section>
+
+  <section id="features">
+    <span class="sec-eyebrow"><span data-en>What's inside</span><span data-ru>Что внутри</span></span>
+    <h2><span data-en>Everything on your device. Nothing anywhere else.</span><span data-ru>Всё на устройстве. Больше нигде.</span></h2>
+    <div class="features">
+      <div class="feat"><div class="ic">🗓️</div><h3><span data-en>90 real expressions</span><span data-ru>90 живых выражений</span></h3><p><span data-en>Idioms and connectors Spaniards use daily — each with usage notes and examples.</span><span data-ru>Идиомы и связки, которые испанцы используют каждый день — с пояснениями и примерами.</span></p></div>
+      <div class="feat"><div class="ic">🔆</div><h3><span data-en>10-a-day goal + streak</span><span data-ru>Цель 10 в день и серия</span></h3><p><span data-en>A simple counter that turns a phrase into a habit.</span><span data-ru>Простой счётчик, который превращает фразу в привычку.</span></p></div>
+      <div class="feat"><div class="ic">📲</div><h3><span data-en>Home Screen widget</span><span data-ru>Виджет на «Домой»</span></h3><p><span data-en>The phrase of the day, plus check off a use right from the widget.</span><span data-ru>Фраза дня и отметка использования прямо из виджета.</span></p></div>
+      <div class="feat"><div class="ic">🔔</div><h3><span data-en>Morning reminder</span><span data-ru>Утреннее напоминание</span></h3><p><span data-en>A gentle notification with today's phrase.</span><span data-ru>Мягкое уведомление с фразой дня.</span></p></div>
+      <div class="feat"><div class="ic">🌍</div><h3><span data-en>7 languages</span><span data-ru>7 языков</span></h3><p><span data-en>Translations in English, Russian, German, French, Italian, Portuguese and Japanese.</span><span data-ru>Переводы на английский, русский, немецкий, французский, итальянский, португальский и японский.</span></p></div>
+      <div class="feat"><div class="ic">🌅</div><h3><span data-en>Sunset & Day themes</span><span data-ru>Темы «Закат» и «День»</span></h3><p><span data-en>A warm dark theme and a soft light one. No account, no internet, no data collection.</span><span data-ru>Тёплая тёмная и мягкая светлая. Без аккаунта, без интернета, без сбора данных.</span></p></div>
+    </div>
+  </section>
+
+  <section id="phrases">
+    <span class="sec-eyebrow"><span data-en>A taste</span><span data-ru>Немного примеров</span></span>
+    <h2><span data-en>The phrases you keep hearing in Spain</span><span data-ru>Фразы, которые всё время слышишь в Испании</span></h2>
+    <div class="phrases">
+      <div class="pchip"><b>menos mal</b><span data-en>thank goodness</span><span data-ru>слава богу / хорошо, что</span></div>
+      <div class="pchip"><b>a lo mejor</b><span data-en>maybe, perhaps</span><span data-ru>может быть</span></div>
+      <div class="pchip"><b>vale la pena</b><span data-en>it's worth it</span><span data-ru>оно того стоит</span></div>
+      <div class="pchip"><b>ponerse las pilas</b><span data-en>to get one's act together</span><span data-ru>взяться за ум</span></div>
+      <div class="pchip"><b>por si acaso</b><span data-en>just in case</span><span data-ru>на всякий случай</span></div>
+      <div class="pchip"><b>de hecho</b><span data-en>in fact, actually</span><span data-ru>на самом деле</span></div>
+      <div class="pchip"><b>por increíble que parezca</b><span data-en>incredible as it seems</span><span data-ru>как ни невероятно</span></div>
+      <div class="pchip"><b>o sea</b><span data-en>I mean, that is</span><span data-ru>то есть</span></div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="legal">
+      <span class="sec-eyebrow"><span data-en>Privacy Policy</span><span data-ru>Политика конфиденциальности</span></span>
+      <h2><span data-en>Privacy Policy</span><span data-ru>Политика конфиденциальности</span></h2>
+      <p class="updated"><span data-en>Last updated 17 July 2026</span><span data-ru>Обновлено 17 июля 2026</span></p>
+
+      <p class="lead"><span data-en>Por Cierto does not collect, store, or transmit any personal data. There is no account, no analytics, and no tracking.</span><span data-ru>Por Cierto не собирает, не хранит и не передаёт никакие персональные данные. Нет аккаунта, нет аналитики, нет трекинга.</span></p>
+
+      <h3><span data-en>What we store</span><span data-ru>Что хранится</span></h3>
+      <p><span data-en>Your progress — the phrase of the day, the uses you check off, and your streak — is saved only on your device (and, for the widget, in a private app group on the same device). It never leaves your iPhone and is never sent to us or to anyone else.</span><span data-ru>Ваш прогресс — фраза дня, отмеченные использования и серия — хранится только на вашем устройстве (а для виджета — в приватной группе приложения на том же устройстве). Он никогда не покидает ваш iPhone и не передаётся нам или кому-либо ещё.</span></p>
+
+      <h3><span data-en>Network & third parties</span><span data-ru>Сеть и третьи стороны</span></h3>
+      <p><span data-en>The app works fully offline. It contains no third-party SDKs, no advertising, and no analytics. It makes no network requests to collect data.</span><span data-ru>Приложение работает полностью офлайн. В нём нет сторонних SDK, рекламы и аналитики. Оно не делает сетевых запросов для сбора данных.</span></p>
+
+      <h3><span data-en>Notifications</span><span data-ru>Уведомления</span></h3>
+      <p><span data-en>If you allow notifications, the morning reminder is scheduled locally on your device. No notification data is sent to a server.</span><span data-ru>Если вы разрешите уведомления, утреннее напоминание планируется локально на устройстве. Никакие данные уведомлений не отправляются на сервер.</span></p>
+
+      <h3><span data-en>Children</span><span data-ru>Дети</span></h3>
+      <p><span data-en>The app is rated 4+ and safe for all ages. Since no data is collected, none is collected from children.</span><span data-ru>Приложение имеет рейтинг 4+ и безопасно для любого возраста. Поскольку данные не собираются, они не собираются и у детей.</span></p>
+
+      <h3><span data-en>Changes & contact</span><span data-ru>Изменения и контакты</span></h3>
+      <p><span data-en>If this policy ever changes, the updated version will appear on this page. Questions? Email </span><span data-ru>Если политика изменится, обновлённая версия появится на этой странице. Вопросы? Пишите на </span><a class="mail" href="mailto:alena.tomsk@gmail.com">alena.tomsk@gmail.com</a>.</p>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="legal">
+      <span class="sec-eyebrow"><span data-en>Support</span><span data-ru>Поддержка</span></span>
+      <h2><span data-en>Support</span><span data-ru>Поддержка</span></h2>
+      <p class="lead"><span data-en>Something not working, a phrase that reads wrong, or an idea for the app? I read every message.</span><span data-ru>Что-то не работает, фраза звучит не так или есть идея для приложения? Я читаю каждое сообщение.</span></p>
+      <p><span data-en>Write to </span><span data-ru>Пишите на </span><a class="mail" href="mailto:alena.tomsk@gmail.com">alena.tomsk@gmail.com</a><span data-en> and I'll get back to you, usually within a couple of days.</span><span data-ru> — я отвечу, обычно в течение пары дней.</span></p>
+      <h3><span data-en>Good to know</span><span data-ru>Полезно знать</span></h3>
+      <p><span data-en>Your progress lives on your device. Deleting the app removes it; there is no cloud copy. The app needs no login and works without internet.</span><span data-ru>Прогресс хранится на устройстве. Удаление приложения стирает его — облачной копии нет. Вход не нужен, интернет не требуется.</span></p>
+    </div>
+  </section>
+
+</div>
+
+<div class="wrap">
+  <footer>
+    <span>© 2026 Elena Krasnoperova · Por Cierto</span>
+    <span><a href="#privacy" data-en>Privacy</a><a href="#privacy" data-ru>Конфиденциальность</a> · <a href="#support" data-en>Support</a><a href="#support" data-ru>Поддержка</a> · <a href="mailto:alena.tomsk@gmail.com">alena.tomsk@gmail.com</a></span>
+  </footer>
+</div>
+
+<script>
+  function setLang(l){
+    document.documentElement.lang = l;
+    document.getElementById('en').classList.toggle('on', l==='en');
+    document.getElementById('ru').classList.toggle('on', l==='ru');
+    try { localStorage.setItem('pc_lang', l); } catch(e){}
+  }
+  function setTheme(t){
+    document.documentElement.setAttribute('data-theme', t);
+    try { localStorage.setItem('pc_theme', t); } catch(e){}
+  }
+  (function(){
+    try {
+      var l = localStorage.getItem('pc_lang');
+      if(!l){ l = (navigator.language||'en').toLowerCase().indexOf('ru')===0 ? 'ru' : 'en'; }
+      setLang(l);
+      var t = localStorage.getItem('pc_theme');
+      if(t){ setTheme(t); }
+    } catch(e){}
+  })();
+</script>
+</body>
+</html>
