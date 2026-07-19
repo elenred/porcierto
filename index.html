@@ -149,9 +149,14 @@
   .step p { margin:0; color:var(--ink-soft); font-size:15.5px; }
 
   .features { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:44px; }
-  .feat { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; }
-  .feat .ic { font-size:24px; margin-bottom:12px; }
-  .feat h3 { margin:0 0 6px; font-size:17.5px; letter-spacing:-0.2px; }
+  .feat { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; min-height:176px; display:grid; grid-template-columns:92px 1fr; column-gap:18px; align-content:center; }
+  .feat .ic { width:92px; height:92px; grid-row:1 / span 2; align-self:center; color:var(--ink); }
+  .feat .ic svg { display:block; width:100%; height:100%; overflow:visible; }
+  .feat .ic .feature-line { fill:none; stroke:currentColor; stroke-width:2.15; stroke-linecap:round; stroke-linejoin:round; }
+  .feat .ic .feature-sage { fill:#9AAC91; opacity:.76; }
+  .feat .ic .feature-gold { fill:#E8AA48; opacity:.96; }
+  .feat .ic .feature-gold-line { fill:none; stroke:#FFF8ED; stroke-width:2.15; stroke-linecap:round; stroke-linejoin:round; }
+  .feat h3 { align-self:end; margin:0 0 6px; font-size:17.5px; letter-spacing:-0.2px; }
   .feat p { margin:0; color:var(--ink-soft); font-size:14.5px; }
 
   .phrases { display:flex; flex-wrap:wrap; gap:12px; margin-top:40px; }
@@ -180,6 +185,10 @@
     .steps,.features { grid-template-columns:1fr; }
     .phone { order:-1; }
   }
+  @media (max-width:420px){
+    .feat { grid-template-columns:78px 1fr; column-gap:15px; padding:19px; }
+    .feat .ic { width:78px; height:78px; }
+  }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -195,6 +204,52 @@
   <symbol id="gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="3"/>
     <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+  </symbol>
+  <symbol id="feature-notes" viewBox="0 0 120 100">
+    <rect fill="#9AAC91" opacity=".76" x="8" y="30" width="42" height="54"/>
+    <rect fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" x="30" y="20" width="60" height="66" rx="10"/>
+    <path fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" d="M39 20v-7m12 7v-7m12 7v-7m12 7v-7M43 38l4 4 7-9M43 54l4 4 7-9M43 70l4 4 7-9M60 39h20M60 55h20M60 71h20"/>
+    <circle fill="#E8AA48" opacity=".96" cx="91" cy="76" r="20"/>
+    <path fill="none" stroke="#FFF8ED" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" d="M82 77l6 6 13-17"/>
+  </symbol>
+  <symbol id="feature-goal" viewBox="0 0 120 100">
+    <rect fill="#9AAC91" opacity=".76" x="9" y="48" width="43" height="42"/>
+    <g fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="65" cy="49" r="25"/>
+      <path d="M65 13V3M65 95V85M29 49H19M111 49h-10M40 24l-7-8M97 82l-7-8M40 74l-7 8M97 16l-7 8M52 17l-3-9M81 90l-3-9M33 36l-9-3M106 65l-9-3M33 62l-9 3M106 33l-9 3M52 81l-3 9M81 8l-3 9"/>
+    </g>
+    <circle fill="#E8AA48" opacity=".96" cx="65" cy="49" r="20"/>
+  </symbol>
+  <symbol id="feature-widget" viewBox="0 0 120 100">
+    <rect fill="#9AAC91" opacity=".76" x="5" y="43" width="44" height="45"/>
+    <rect fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" x="29" y="12" width="57" height="76" rx="13"/>
+    <path fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" d="M47 18h21M39 31h12v12H39zM57 31h12v12H57zM75 31h8v12h-8zM39 50h12v12H39zM57 50h12v12H57zM75 50h8v12h-8zM39 69h12v12H39zM57 69h12v12H57z"/>
+    <rect fill="#E8AA48" opacity=".96" x="76" y="61" width="36" height="34" rx="7"/>
+    <path fill="none" stroke="#FFF8ED" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" d="M84 76l10-9 10 9M87 74v13h14V74M92 87v-8h5v8"/>
+  </symbol>
+  <symbol id="feature-bell" viewBox="0 0 120 100">
+    <rect fill="#9AAC91" opacity=".76" x="7" y="54" width="43" height="38"/>
+    <circle fill="#E8AA48" opacity=".96" cx="55" cy="33" r="24"/>
+    <g fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M34 75h55c-7-6-8-12-8-28 0-15-8-25-20-25S41 32 41 47c0 16 0 22-7 28zM53 79c1 8 15 8 16 0M55 22v-5c0-7 12-7 12 0v5"/>
+      <path d="M26 42l-9-7M95 42l9-7M23 56H12M99 56h11"/>
+    </g>
+  </symbol>
+  <symbol id="feature-languages" viewBox="0 0 120 100">
+    <rect fill="#9AAC91" opacity=".76" x="4" y="57" width="46" height="36"/>
+    <circle fill="#E8AA48" opacity=".96" cx="80" cy="82" r="17"/>
+    <g fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="60" cy="48" r="40"/>
+      <path d="M22 42l10-4 5-10 9-1 4-10 10 4 7-4 7 8 11 1 5 8 8 3M23 55l11 3 6 10 10 3 3 16M62 88l2-14 10-5 5-12 12-4 8-11M42 28l8 7-2 9 8 7-4 10-10-2-7-8M72 31l7 7 8-2 3 9-9 5-8-5-7-8z"/>
+    </g>
+  </symbol>
+  <symbol id="feature-themes" viewBox="0 0 120 100">
+    <rect fill="#9AAC91" opacity=".76" x="10" y="34" width="43" height="43"/>
+    <circle fill="#E8AA48" opacity=".96" cx="68" cy="66" r="22"/>
+    <g fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 71h101M29 80c17-5 37-5 54 0M39 88c11-3 23-3 34 0M52 96h10"/>
+      <path d="M43 65a25 25 0 0149 0M13 48c7-7 14-7 21 0M5 53c6-5 12-5 18 0M35 31c8-8 17-8 25 0M31 35h35M72 18c8-8 18-8 26 0M67 23h37M101 43c4-4 9-4 13 0"/>
+    </g>
   </symbol>
 </svg>
 
@@ -285,12 +340,12 @@
     <span class="sec-eyebrow"><span data-en>What's inside</span><span data-ru>Что внутри</span></span>
     <h2><span data-en>Everything on your device. Nothing anywhere else.</span><span data-ru>Всё на устройстве. Больше нигде.</span></h2>
     <div class="features">
-      <div class="feat"><div class="ic">🗓️</div><h3><span data-en>90 real expressions</span><span data-ru>90 живых выражений</span></h3><p><span data-en>Idioms and connectors Spaniards use daily — each with usage notes and examples.</span><span data-ru>Идиомы и связки, которые испанцы используют каждый день — с пояснениями и примерами.</span></p></div>
-      <div class="feat"><div class="ic">🔆</div><h3><span data-en>10-a-day goal + streak</span><span data-ru>Цель 10 в день и серия</span></h3><p><span data-en>A simple counter that turns a phrase into a habit.</span><span data-ru>Простой счётчик, который превращает фразу в привычку.</span></p></div>
-      <div class="feat"><div class="ic">📲</div><h3><span data-en>Home Screen widget</span><span data-ru>Виджет на «Домой»</span></h3><p><span data-en>The phrase of the day, plus check off a use right from the widget.</span><span data-ru>Фраза дня и отметка использования прямо из виджета.</span></p></div>
-      <div class="feat"><div class="ic">🔔</div><h3><span data-en>Morning reminder</span><span data-ru>Утреннее напоминание</span></h3><p><span data-en>A gentle notification with today's phrase.</span><span data-ru>Мягкое уведомление с фразой дня.</span></p></div>
-      <div class="feat"><div class="ic">🌍</div><h3><span data-en>7 languages</span><span data-ru>7 языков</span></h3><p><span data-en>Translations in English, Russian, German, French, Italian, Portuguese and Japanese.</span><span data-ru>Переводы на английский, русский, немецкий, французский, итальянский, португальский и японский.</span></p></div>
-      <div class="feat"><div class="ic">🌅</div><h3><span data-en>Sunset & Day themes</span><span data-ru>Темы «Закат» и «День»</span></h3><p><span data-en>A warm dark theme and a soft light one. No account, no internet, no data collection.</span><span data-ru>Тёплая тёмная и мягкая светлая. Без аккаунта, без интернета, без сбора данных.</span></p></div>
+      <div class="feat"><div class="ic" aria-hidden="true"><svg viewBox="0 0 120 100"><use href="#feature-notes"/></svg></div><h3><span data-en>90 real expressions</span><span data-ru>90 живых выражений</span></h3><p><span data-en>Idioms and connectors Spaniards use daily — each with usage notes and examples.</span><span data-ru>Идиомы и связки, которые испанцы используют каждый день — с пояснениями и примерами.</span></p></div>
+      <div class="feat"><div class="ic" aria-hidden="true"><svg viewBox="0 0 120 100"><use href="#feature-goal"/></svg></div><h3><span data-en>10-a-day goal + streak</span><span data-ru>Цель 10 в день и серия</span></h3><p><span data-en>A simple counter that turns a phrase into a habit.</span><span data-ru>Простой счётчик, который превращает фразу в привычку.</span></p></div>
+      <div class="feat"><div class="ic" aria-hidden="true"><svg viewBox="0 0 120 100"><use href="#feature-widget"/></svg></div><h3><span data-en>Home Screen widget</span><span data-ru>Виджет на «Домой»</span></h3><p><span data-en>The phrase of the day, plus check off a use right from the widget.</span><span data-ru>Фраза дня и отметка использования прямо из виджета.</span></p></div>
+      <div class="feat"><div class="ic" aria-hidden="true"><svg viewBox="0 0 120 100"><use href="#feature-bell"/></svg></div><h3><span data-en>Morning reminder</span><span data-ru>Утреннее напоминание</span></h3><p><span data-en>A gentle notification with today's phrase.</span><span data-ru>Мягкое уведомление с фразой дня.</span></p></div>
+      <div class="feat"><div class="ic" aria-hidden="true"><svg viewBox="0 0 120 100"><use href="#feature-languages"/></svg></div><h3><span data-en>7 languages</span><span data-ru>7 языков</span></h3><p><span data-en>Translations in English, Russian, German, French, Italian, Portuguese and Japanese.</span><span data-ru>Переводы на английский, русский, немецкий, французский, итальянский, португальский и японский.</span></p></div>
+      <div class="feat"><div class="ic" aria-hidden="true"><svg viewBox="0 0 120 100"><use href="#feature-themes"/></svg></div><h3><span data-en>Sunset & Day themes</span><span data-ru>Темы «Закат» и «День»</span></h3><p><span data-en>A warm dark theme and a soft light one. No account, no internet, no data collection.</span><span data-ru>Тёплая тёмная и мягкая светлая. Без аккаунта, без интернета, без сбора данных.</span></p></div>
     </div>
   </section>
 
@@ -309,48 +364,12 @@
     </div>
   </section>
 
-  <section id="privacy">
-    <div class="legal">
-      <span class="sec-eyebrow"><span data-en>Privacy Policy</span><span data-ru>Политика конфиденциальности</span></span>
-      <h2><span data-en>Privacy Policy</span><span data-ru>Политика конфиденциальности</span></h2>
-      <p class="updated"><span data-en>Last updated 17 July 2026</span><span data-ru>Обновлено 17 июля 2026</span></p>
-
-      <p class="lead"><span data-en>Por Cierto does not collect, store, or transmit any personal data. There is no account, no analytics, and no tracking.</span><span data-ru>Por Cierto не собирает, не хранит и не передаёт никакие персональные данные. Нет аккаунта, нет аналитики, нет трекинга.</span></p>
-
-      <h3><span data-en>What we store</span><span data-ru>Что хранится</span></h3>
-      <p><span data-en>Your progress — the phrase of the day, the uses you check off, and your streak — is saved only on your device (and, for the widget, in a private app group on the same device). It never leaves your iPhone and is never sent to us or to anyone else.</span><span data-ru>Ваш прогресс — фраза дня, отмеченные использования и серия — хранится только на вашем устройстве (а для виджета — в приватной группе приложения на том же устройстве). Он никогда не покидает ваш iPhone и не передаётся нам или кому-либо ещё.</span></p>
-
-      <h3><span data-en>Network & third parties</span><span data-ru>Сеть и третьи стороны</span></h3>
-      <p><span data-en>The app works fully offline. It contains no third-party SDKs, no advertising, and no analytics. It makes no network requests to collect data.</span><span data-ru>Приложение работает полностью офлайн. В нём нет сторонних SDK, рекламы и аналитики. Оно не делает сетевых запросов для сбора данных.</span></p>
-
-      <h3><span data-en>Notifications</span><span data-ru>Уведомления</span></h3>
-      <p><span data-en>If you allow notifications, the morning reminder is scheduled locally on your device. No notification data is sent to a server.</span><span data-ru>Если вы разрешите уведомления, утреннее напоминание планируется локально на устройстве. Никакие данные уведомлений не отправляются на сервер.</span></p>
-
-      <h3><span data-en>Children</span><span data-ru>Дети</span></h3>
-      <p><span data-en>The app is rated 4+ and safe for all ages. Since no data is collected, none is collected from children.</span><span data-ru>Приложение имеет рейтинг 4+ и безопасно для любого возраста. Поскольку данные не собираются, они не собираются и у детей.</span></p>
-
-      <h3><span data-en>Changes & contact</span><span data-ru>Изменения и контакты</span></h3>
-      <p><span data-en>If this policy ever changes, the updated version will appear on this page. Questions? Email </span><span data-ru>Если политика изменится, обновлённая версия появится на этой странице. Вопросы? Пишите на </span><a class="mail" href="mailto:support@elen.red">support@elen.red</a>.</p>
-    </div>
-  </section>
-
-  <section id="support">
-    <div class="legal">
-      <span class="sec-eyebrow"><span data-en>Support</span><span data-ru>Поддержка</span></span>
-      <h2><span data-en>Support</span><span data-ru>Поддержка</span></h2>
-      <p class="lead"><span data-en>Something not working, a phrase that reads wrong, or an idea for the app? I read every message.</span><span data-ru>Что-то не работает, фраза звучит не так или есть идея для приложения? Я читаю каждое сообщение.</span></p>
-      <p><span data-en>Write to </span><span data-ru>Пишите на </span><a class="mail" href="mailto:support@elen.red">support@elen.red</a><span data-en> and I'll get back to you, usually within a couple of days.</span><span data-ru> — я отвечу, обычно в течение пары дней.</span></p>
-      <h3><span data-en>Good to know</span><span data-ru>Полезно знать</span></h3>
-      <p><span data-en>Your progress lives on your device. Deleting the app removes it; there is no cloud copy. The app needs no login and works without internet.</span><span data-ru>Прогресс хранится на устройстве. Удаление приложения стирает его — облачной копии нет. Вход не нужен, интернет не требуется.</span></p>
-    </div>
-  </section>
-
 </div>
 
 <div class="wrap">
   <footer>
     <span><span data-en>Made with ❤️ by </span><span data-ru>Сделано с ❤️ — </span><a href="https://elen.red" target="_blank" rel="noopener" style="color:var(--ink);font-weight:700">Elen Red</a></span>
-    <span><a href="#privacy" data-en>Privacy</a><a href="#privacy" data-ru>Конфиденциальность</a> · <a href="#support" data-en>Support</a><a href="#support" data-ru>Поддержка</a> · <a href="mailto:support@elen.red">support@elen.red</a></span>
+    <span><a href="/privacy/" data-en>Privacy</a><a href="/privacy/" data-ru>Конфиденциальность</a> · <a href="mailto:support@elen.red" data-en>Contact</a><a href="mailto:support@elen.red" data-ru>Написать</a></span>
   </footer>
 </div>
 
